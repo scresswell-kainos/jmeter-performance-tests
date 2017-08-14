@@ -11,8 +11,7 @@
       <stringProp name="TestPlan.user_define_classpath"></stringProp>
     </TestPlan>
     <hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="register" enabled="true">
-        <stringProp name="TestPlan.comments">	</stringProp>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="local-authority-api" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -20,46 +19,32 @@
         </elementProp>
         <stringProp name="ThreadGroup.num_threads">1</stringProp>
         <stringProp name="ThreadGroup.ramp_time">1</stringProp>
-        <longProp name="ThreadGroup.start_time">1502134555000</longProp>
-        <longProp name="ThreadGroup.end_time">1502134555000</longProp>
+        <longProp name="ThreadGroup.start_time">1502366330000</longProp>
+        <longProp name="ThreadGroup.end_time">1502366330000</longProp>
         <boolProp name="ThreadGroup.scheduler">false</boolProp>
         <stringProp name="ThreadGroup.duration"></stringProp>
         <stringProp name="ThreadGroup.delay"></stringProp>
       </ThreadGroup>
       <hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="records" enabled="true">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="organisations" enabled="true">
           <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
             <collectionProp name="Arguments.arguments">
               <elementProp name="" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value">{&#xd;
-  &quot;geometry&quot;: { &quot;features&quot;: [{ &quot;geometry&quot;: { &quot;coordinates&quot;: [294700, 91353.5], &quot;type&quot;: &quot;Point&quot; },&#xd;
-    &quot;properties&quot;: { &quot;id&quot;: 401 }, &quot;crs&quot;: { &quot;properties&quot;: {  &quot;name&quot;: &quot;urn:ogc:def:crs:EPSG::27700&quot; },&#xd;
-      &quot;type&quot;: &quot;name&quot; }, &quot;type&quot;: &quot;Feature&quot; }],&#xd;
-    &quot;type&quot;: &quot;FeatureCollection&quot; },&#xd;
-  &quot;registration-date&quot; : &quot;2017-02-02&quot;,&#xd;
-  &quot;statutory-provision&quot; : &quot;Coast Protection Act 1949 section 12&quot;,&#xd;
-  &quot;charge-type&quot; : &quot;General Charge&quot;,&#xd;
-  &quot;charge-geographic-description&quot; : &quot;Charge to be varied&quot;,&#xd;
-  &quot;further-information-location&quot; : &quot;some further info&quot;,&#xd;
-  &quot;further-information-reference&quot; : &quot;AB1212&quot;,&#xd;
-  &quot;originating-authority&quot; : &quot;Place City Council&quot;,&#xd;
-  &quot;instrument&quot; : &quot;Deed&quot;,&#xd;
-  &quot;start-date&quot; : &quot;2017-02-03&quot;&#xd;
-}</stringProp>
+                <stringProp name="Argument.value"></stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
             </collectionProp>
           </elementProp>
-          <stringProp name="HTTPSampler.domain">llc-integration-reg.service.dev.ctp.local</stringProp>
-          <stringProp name="HTTPSampler.port">8082</stringProp>
+          <stringProp name="HTTPSampler.domain">llc-integration-report.service.dev.ctp.local</stringProp>
+          <stringProp name="HTTPSampler.port">8076</stringProp>
           <stringProp name="HTTPSampler.connect_timeout"></stringProp>
           <stringProp name="HTTPSampler.response_timeout"></stringProp>
           <stringProp name="HTTPSampler.protocol"></stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">/v1.0/records</stringProp>
-          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <stringProp name="HTTPSampler.path">/v1.0/organisations</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
           <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
@@ -70,6 +55,42 @@
         </HTTPSamplerProxy>
         <hashTree>
           <ResultCollector guiclass="GraphVisualizer" testclass="ResultCollector" testname="Graph Results" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <sentBytes>true</sentBytes>
+                <threadCounts>true</threadCounts>
+                <idleTime>true</idleTime>
+                <connectTime>true</connectTime>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+          </ResultCollector>
+          <hashTree/>
+          <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="View Results in Table" enabled="true">
             <boolProp name="ResultCollector.error_logging">false</boolProp>
             <objProp>
               <name>saveConfig</name>
