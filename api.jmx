@@ -54,7 +54,7 @@
           </elementProp>
           <elementProp name="reg.port" elementType="Argument">
             <stringProp name="Argument.name">reg.port</stringProp>
-            <stringProp name="Argument.value">8093</stringProp>
+            <stringProp name="Argument.value">8082</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="report.service" elementType="Argument">
@@ -316,8 +316,8 @@
               </elementProp>
             </collectionProp>
           </elementProp>
-          <stringProp name="HTTPSampler.domain">llc-integration-reg.service.dev.ctp.local</stringProp>
-          <stringProp name="HTTPSampler.port">8082</stringProp>
+          <stringProp name="HTTPSampler.domain">${env}${reg.service}</stringProp>
+          <stringProp name="HTTPSampler.port">${reg.port}</stringProp>
           <stringProp name="HTTPSampler.connect_timeout"></stringProp>
           <stringProp name="HTTPSampler.response_timeout"></stringProp>
           <stringProp name="HTTPSampler.protocol">http</stringProp>
